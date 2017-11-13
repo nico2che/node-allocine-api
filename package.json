@@ -5,7 +5,7 @@
   "description": "Simple module used to access the Allocine API",
   "repository": {
     "type": "git",
-    "url": "https://github.com/leeroybrun/node-allocine-api.git"
+    "url": "https://github.com/nico2che/node-allocine-api.git"
   },
   "keywords": [
     "allocine",
