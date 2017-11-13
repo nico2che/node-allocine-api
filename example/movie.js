@@ -1,8 +1,8 @@
-var allocine = require('../lib/allocine-api');
+const allocine = require('../lib/allocine-api');
 
-allocine.api('movie', {code: '143067'}, function(error, result) {
-	if(error) { console.log('Error : '+ error); return; }
-
+(async () => {
+	const result = await allocine.api('movie', {code: '143067'});
+	if (result.error) return console.log('Error #' + result.error.code + ' : ' + result.error.$)
 	console.log('Success !');
 	console.log(result.movie.title);
-});
+})()

@@ -1,8 +1,8 @@
-var allocine = require('../lib/allocine-api');
+const allocine = require('../lib/allocine-api');
 
-allocine.api('search', {q: 'spiderman', filter: 'movie'}, function(error, results) {
-	if(error) { console.log('Error : '+ error); return; }
-	
+(async () => {
+	const results = await allocine.api('search', {q: 'spiderman', filter: 'movie'});
+	if (results.error) return console.log('Error #' + results.error.code + ' : ' + results.error.$)
 	console.log('Success !');
 	console.log(results);
-});
+})()
